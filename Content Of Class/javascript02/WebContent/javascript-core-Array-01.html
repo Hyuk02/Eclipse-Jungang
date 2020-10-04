@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Array 함수</title></head>
+<body>
+<script>
+var x=[1,2,3];
+var y=[4,5,6];
+var joined=x.concat(y);//배열 합치기
+document.write(x+'<br>');
+document.write(joined+"<br>");
+
+var fruits=["apple","banana","grape"];
+document.write(fruits.indexOf("banana")+"<br>");//배열내의 위치 index값
+document.write(fruits.indexOf("mango")+"<br>");//존재하지않으면 -1
+
+var numbers=[1,2,3,4,5];
+numbers.push(6);//append
+document.write(numbers+"<br>");
+//statck구조로 처리 pop()
+item=numbers.pop();//가장 나중에 입력된요소를 빼서 삭제하고 보여줌.
+document.write("삭제된 item:"+item+"<br>");
+document.write("남은요소들:"+numbers+"<br>");
+
+numbers=[1,2,3,4,5,6,7,8,9,10];
+
+//queue구조로 처리 shift()
+item=numbers.shift();//제일 먼저 저장된 요소 삭제하고 보여줌
+document.write("삭제된 item:"+item+"<br>");
+document.write("남은요소들:"+numbers+"<br>");
+
+//sort()
+var myArray=[10,7,23,99,169,19,11,1];//문자열 로 인식하여  사전식 정렬
+myArray.sort();//오름차순 정렬
+document.write(myArray+"<br>");//사전식 정렬
+
+//sort()수치형 처리-sort(function(변수1,변수2){return 변수1-변수2});
+myArray=[10,7,23,99,169,19,11,1];
+myArray.sort(function (a,b){return a-b});//a-b>0,0,<0
+//a-b 수치형으로 변환하여 처리-comparator기능의 함수 처리
+document.write(myArray+"<br>");
+
+</script>
+</body>
+</html>

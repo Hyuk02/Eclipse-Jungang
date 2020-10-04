@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// var 변수; 로컬변수
+// 변수; 전역변수(global변수)
+function calc(type){
+	x=Number(document.calculator.number.value);
+	if(type==1){
+		y=Math.sin((x*Math.PI)/180.0);	
+	}else if(type==2){
+		y=Math.log(x);
+	}else if(type==3){
+		y=Math.sqrt(x);
+	}else if(type==4){
+		y=Math.abs(x);
+	}
+	//변수 y 선언시 var키워드 없이 선언하면 y는 전역변수 
+	//if()블럭내에서 선언되어도, 블럭 밖에서 사용가능
+	document.calculator.total.value=y;
+}
+</script>
+</head>
+<body>
+<form name="calculator">
+입력:<input type="text" name="number"><br>
+계산결과:<input type="text" name="total"><br>
+<input type="button" value="SIN" onclick="calc(1)">
+<input type="button" value="LOG" onclick="calc(2)">
+<input type="button" value="SQRT" onclick="calc(3)">
+<input type="button" value="ABS" onclick="calc(4)">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>jquery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#target").load("ajax_info.txt");//정적리소트 얻기 load(요청리소스);
+	});
+});
+</script>
+</head>
+<body>
+<div id="target" style="width:300px; height: 260px; border:1px solid black;"></div>
+<button>Get Data</button>
+</body>
+</html>

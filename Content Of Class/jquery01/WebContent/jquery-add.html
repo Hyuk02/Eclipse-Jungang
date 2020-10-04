@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<title>Insert title here</title>
+<script>
+ function appendText(){
+	 var txt1 = "<b>I </b>";//html
+	 var txt2 = $("<i></i>").text("love ");//jquery
+	 var txt3 = document.createElement("b");//javascript DOM <b></b>
+	 txt3.innerHTML = "jQuery";
+	 $("p").after(txt1,txt2,txt3);
+ }
+</script>
+</head>
+<body>
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+</body>
+</html>

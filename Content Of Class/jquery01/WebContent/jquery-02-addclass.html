@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Insert title here</title>
+<style>
+div{ width: 70px; height: 50px; float:left; margin: 5px;
+     background: red;}
+.next{ background: blue;}     
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	var modWidth=50;
+	$("div").click(function(){
+		$(this).width(modWidth).addClass("next");
+		modWidth-=8;
+	});//$("div")로 얻어지는 요소는 5개(0,1,2,3,4)
+});
+</script>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>A</div>
+
+</body>
+</html>

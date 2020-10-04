@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>stop()</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#flip").click(function(){
+		$("#panel").slideDown(5000);
+	});
+	$("#stop").click(function(){
+		$("#panel").stop();//멈춤
+	});
+});
+</script>
+<style>
+#panel,#flip{padding:5px;font-size:18px; text-align:center;
+             background-color: #555; color:white; 
+             border:solid 1px #666; border-radius:3px;}
+#panel{padding: 50px; display: none;}
+</style>
+</head>
+<body>
+<button id="stop">stop sliding</button>
+
+<div id="flip">Click to slid down panel</div>
+<div id="panel">Hello world!</div>
+</body>
+</html>

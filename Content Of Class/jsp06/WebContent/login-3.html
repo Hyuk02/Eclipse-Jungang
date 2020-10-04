@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>예제용 파일</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type='text/css'>
+		/* 스타일 */
+		body {
+			margin: 0;
+		}
+		a {
+			color:#000000;
+			text-decoration: none;
+		}
+		#wrap {
+			width:960px;
+			background: #cccccc;
+			position: relative;
+			left:50%;
+			margin-left:-480px;
+		}
+		#header {
+			background: #eeeeee;
+			padding:20px;
+		}
+		#header .logo {
+			float:left;
+		}
+		#content {
+			padding:20px;
+		}
+		#content img {
+			width:100%;
+		}
+		#footer {
+			background: #000000;
+			height: 50px;
+			text-align: center;
+			padding:20px;
+		}
+		#footer span {
+			color:#ffffff;
+		}
+		.clear {
+			clear:both;
+		}
+
+		#loginForm {
+			background: #eeeeee;
+			position: relative;
+			width: 50%;
+			border:1px solid #999999;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		#loginForm label {
+			display: inline-block;
+			width:30%;
+		}
+
+		#loginForm input {
+			padding: 2%;
+			color:#666666;
+			border:none;
+			border-right:1px solid #999999;
+			border-bottom:1px solid #999999;
+		}
+
+
+		#loginForm select {
+			padding: 2%;
+			color:#666666;
+			border:none;
+			border-right:1px solid #999999;
+			border-bottom:1px solid #999999;
+		}
+
+
+		#loginForm input[type="checkbox"] {
+			width:5%;
+		}
+
+		#loginForm input[type="submit"] {
+			width:45%;
+			background: #555599;
+			border:none;
+			color:#ffffff;
+			padding:10px;
+		}
+
+		#loginForm input[type="submit"]:hover {			
+			background: #9999cc;
+			cursor: pointer;
+		}
+		#loginForm input[type="reset"] {
+			width:45%;
+			background: #555599;
+			border:none;
+			color:#ffffff;
+			padding:10px;
+		}
+
+		#loginForm input[type="reset"]:hover {			
+			background: #9999cc;
+			cursor: pointer;
+		}
+
+       #loginForm input[type="button"] {
+			width:20%;
+			background: #555599;
+			border:none;
+			color:#ffffff;
+			padding:10px;
+		}
+		
+		#loginForm input[type="button"]:hover {			
+			background: #9999cc;
+			cursor: pointer;
+		}
+
+		#loginForm #phone2 {
+			width:15%;
+		}
+		
+		#loginForm #phone3 {
+			width:15%;
+		}
+		
+		#loginForm input[type="radio"] + label {
+			width:auto;
+		}
+
+		#loginForm textarea {
+			width: 96%;
+			height:200px;
+		}
+	</style>
+<script>
+function check(){
+  /* 현재페이지의 요소(Element-html태크)중 id가 "idname"인것을 얻기
+     - getElementById(아이디명) */
+  var name=document.getElementById("idname");
+  var value=name.value;
+	//alert(value);
+	
+ //location객체 - url경로정보를 담고있는 객체
+ //경로속성 href,
+ //href=지정경로
+  location.href="idcheck.jsp?id="+value;	//get방식 전달
+}
+function pwdCheck(){
+	var pw=document.getElementById("pw");
+	var pw1=document.getElementById("pwconfirm");
+	if(pw.value!=pw1.value){
+		alert('입력값이 서로 다릅니다.');
+		pw.value='';
+		pw1.value='';
+		pw1.focus();
+		//return false;
+	}
+	//return true;
+	
+	var isok=document.getElementById("radio-yes");
+	/* if(isok.checked){
+		alert("yes");
+	}else{
+		alert("no");
+	} */
+	if(!isok.checked){
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>	
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<span class="logo"><img src="img/logo.png" alt="사이트 로고"></span>
+			<h1>CSS활용강의</h1>
+			<h2>로그인 폼 연습하기</h2>
+			<div class="clear"></div>
+		</div>
+		<div id="content">
+			<form id="loginForm" method="post" 
+			      action="requestElements.jsp">
+				<h3>회원가입 신청</h3>
+				<fieldset>
+					<legend>필수입력</legend>
+					<p>				
+					<label>아이디</label>
+					<input name="idname" id="idname" type="text" required/>
+					<input type="button" id="idcheck" name="idcheck" 
+					       onclick="check()" value="중복 검사"/>
+					</p>
+
+					<p>
+					<label>비밀번호</label>
+					<input name="pw" id="pw" type="password" required />
+					</p>
+					<p>
+					<label>비밀번호 확인</label>
+					<input name="pw" id="pwconfirm" type="password" required/>
+					</p>
+					
+					<p>				
+					<label>이름</label>
+					<input name="myname" id="myname" type="text" required/>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>선택정보 입력</legend>
+					<p>				
+					<label>핸드폰</label>
+					<select name="phone1" id="phone1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					- 
+					<input name="phone2" id="phone2" type="text" maxlength="4">
+					- 
+					<input name="phone3" id="phone3" type="text" maxlength="4">
+					</p>
+					<p>						
+					<label>성별</label>
+						<input type="radio" class="radio" id="radio-m" name="gender" value="yes">
+						<label for="radio-m">남</label>
+						<input type="radio" class="radio" id="radio-w" name="gender" value="no">
+						<label for="radio-w">여</label>
+					</p>
+					<p>
+					<label>취미</label>
+					<input type="checkbox" name="hobbies" value="독서">독서
+					<input type="checkbox" name="hobbies" value="운동">운동
+					<input type="checkbox" name="hobbies" value="영화">영화
+					</p>
+				</fieldset>
+				<fieldset>
+					<legend>남기고 싶은 말</legend>
+					<textarea name="comment"></textarea>
+				</fieldset>
+				<p>
+					회원가입을 완료하시겠습니까?
+						<input type="radio" class="radio" id="radio-yes" name="isok" value="yes">
+						<label for="radio-m">네</label>
+						<input type="radio" class="radio" id="radio-no" name="isok" value="no">
+						<label for="radio-w">아니오</label>
+					
+					<p>		
+				</p>
+
+				<p>
+				<input type="submit" value="전송" onclick="return pwdCheck()">
+				<input type="reset" value="취소">
+				</p>
+			</form>
+		</div>
+		<div id="footer">
+			<span>2015.CSS활용강좌 All rights reserved.</span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>validation</title>
+<script>
+function check(){
+	if(document.getElementById('name').value==''){
+		alert('name이 비어있습니다.');
+		document.getElementById('name').focus();
+		return false;
+	}
+	if(document.getElementById('address').value==''){
+		alert('address이 비어있습니다.');
+		document.getElementById('address').focus();
+		return false;
+	}
+	if(document.getElementById('birthday').value==''){
+		alert('birthday이 비어있습니다.');
+		document.getElementById('birthday').focus();
+		return false;
+	}
+	if(document.getElementById('username').value==''){
+		alert('username이 비어있습니다.');
+		document.getElementById('username').focus();
+		return false;
+	}
+	/* 입력길이 체크  */
+	var s=document.getElementById('username').value;
+	
+	/* if(s.length>=6 & s.length<=8){
+		return true;
+	}else */ if(!(s.length>=6 & s.length<=8)){
+		alert(6+"문자와 "+8+"문자 사이로 입력해주세요");
+		document.getElementById('username').focus();
+		return false;
+	}
+		
+	if(document.getElementById('email').value==''){
+		alert('email이 비어있습니다.');
+		document.getElementById('email').focus();
+		return false;
+	}
+	if(document.getElementById('tel').value==''){
+		alert('tel이 비어있습니다.');
+		document.getElementById('tel').focus();
+		return false;
+	}
+	var exp=/^[0-9]+$/;//검증식
+	if(!(document.getElementById('tel').value.match(exp))){
+		alert("숫자만 입력하세요");
+		document.getElementById('tel').value='';
+		document.getElementById('tel').focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<form onsubmit="return check()">
+이름:<input type='text' id='name' name='name'><br>
+주소:<input type='text' id='address' name='address'><br>
+생일:<input type='date' id='birthday' name='birthday'><br>
+아이디(6~8문자):
+<input type="text" id="username" name="username"><br>
+이메일:<input type="email" id="email" name="email"><br>
+휴대폰:<input type="tel" id="tel" name="tel"><br>
+<input type="submit" value="확인"><br>
+</form>
+
+</body>
+</html>

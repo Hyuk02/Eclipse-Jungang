@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.siblings *{
+ display: block;
+ border:2px solid lightgray;
+ color:lightgray;
+ padding: 5px;
+ margin: 15px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	/* 해당요소제외 자매요소들만 css적용 */
+	$("h2").siblings().css({"color":"red","border":"2px solid red"});
+	$("h2").next().css({"color": "green", "border": "2px solid blue"});
+	$("h2").nextAll().css({"color": "yellow", "border": "2px solid white"});
+});
+</script>
+</head>
+<body class="siblings">
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+</body>
+</html>

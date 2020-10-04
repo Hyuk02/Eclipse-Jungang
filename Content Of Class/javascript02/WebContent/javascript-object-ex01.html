@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>생성자를 이용한 객체 </title>
+</head>
+<body>
+<script type="text/javascript">
+/* 생성자 */
+/* class Car{String model;int speed;String color;} */
+function Car(model,speed,color){
+	this.model=model;
+	this.speed=speed;
+	this.color=color;
+	this.year=2012;
+	this.rate=14.1;
+	this.brake=function(){this.speed-=10;}
+	this.accel=function(){this.speed+=10;}
+}
+myCar = new Car("520d",60,"red");
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+myCar.accel();
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+myCar.brake();
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+"제작연도:"
+		             +myCar.year+"연비:"+myCar.rate+'<br>');
+//동적 속성추가 
+//참조변수.변수명=값(함수);
+myCar.carname="나의차";
+myCar.printCar=function(){alert(myCar.model+","+myCar.carname);}
+myCar.printCar();
+</script>
+
+</body>
+</html>

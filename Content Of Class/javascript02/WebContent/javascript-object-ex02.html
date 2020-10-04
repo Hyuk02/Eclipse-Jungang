@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Insert title here</title>
+</head>
+<body>
+<script>
+function Student(no,name,score){
+	this.nation="대한민국";
+	this.no=no;
+	this.name=name;
+	this.score=score;
+	this.getscore=function(){alert(this.score);}
+}
+var student=new Student(10, "홍길동", 88);
+document.write(student.nation+","+student.no+','
+		       +student.name+","+student.score+'<br>');
+student.getscore();		       
+</script>
+
+</body>
+</html>

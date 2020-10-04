@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>DOM 이미지 속성변경</title>
+<script>
+function changeImage(){
+	var img=document.getElementById("image");
+	img.src="./img/poodle.png";
+}
+</script>
+</head>
+<body>
+<img id="image" alt="image" src="./img/pome.png" width="120" height="100">
+<input type="button" onclick="changeImage()" value="눌러보세요">
+</body>
+</html>

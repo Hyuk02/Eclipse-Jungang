@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Date() 함수들 </title>
+</head>
+<body>
+<script>
+var today=new Date();//현재 날짜
+document.write(today.toDateString()+'<br>');//문자열출력
+document.write(today.toISOString()+"<br>");
+document.write(today.toJSON()+"<br>");//json(javascript object notation)
+document.write(today.toLocaleDateString()+"<br>");//지역포멧
+document.write(today.toLocaleTimeString()+"<br>");//지역포멧
+document.write(today.toString()+"<br>");
+document.write(today.toTimeString()+'<br>');
+document.write(today.toUTCString()+'<br>');
+
+document.write(today.getFullYear()+"<br>");//년도
+document.write(today.getMonth()+'<br>');//월-출력값 현재월 -1
+document.write(today.getDate()+"<br>");
+document.write(today.getDay()+'<br>');//요일0~6
+document.write(today.getHours()+"<br>");//0~23
+document.write(today.getMinutes()+"<br>");
+document.write(today.getMilliseconds()+"<br>");
+//설정
+today.setDate(2);
+document.write(today.getDate()+"<br>");
+document.write(today.toDateString()+'<br>');//문자열출력
+
+</script>
+</body>
+</html>

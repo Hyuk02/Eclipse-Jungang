@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>try-catch</title>
+</head>
+<body>
+<script>
+var msg="";//메세지 출력용 변수
+function test(){
+	try{
+		allert("Hello World!");
+	}catch(err){
+		msg="다음과 같은 오류가 발생하였음:"+err.message;
+		alert(msg);
+	}
+}
+</script>
+
+<input type="button" value="try-catch 시험" onclick="test()">
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		alert($("#dog").attr("src"));
+	});
+});
+</script>
+</head>
+<body>
+<img id="dog" src="dog.png" alt="강아지" width="120" height="120"><br>
+<button>attr()</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+function afterText(){
+	var text1="<b>I </b>"; // thml로 요소 생성
+	var text2=$("<i></i>").text("love ");//jquery로 요소생성
+	var text3=document.createElement("b");//DOM으로 <b></b>택 생성
+	     text3.innerHTML="jQuery";
+	$("img").after(text1,text2,text3);//요소 
+}
+</script>
+</head>
+<body>
+
+<img src="w3jquery.gif" alt="jQuery" width="100" height="140">
+
+<p>Click the button to insert text after the image.</p>
+
+<button onclick="afterText()">Insert after</button>
+</body>
+</html>

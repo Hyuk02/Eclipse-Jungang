@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>태그명으로 요소찾기</title>
+</head>
+<body>
+<ul>
+ <li>List item 1<span>값</span></li>
+ <li>List item 2</li>
+ <li>List item 3</li>
+ <li>List item 4</li>
+ <li>List item 5</li>
+</ul>
+
+<ul>
+ <li>List item 6</li>
+ <li>List item 7</li>
+ <li>List item 8</li>
+ <li>List item 9</li>
+ <li>List item 10</li>
+</ul>
+
+<script>
+var list 
+ = document.getElementsByTagName("ul")[0];//여러개 ul중 첫번째 ul요소 얻기
+var allItem = list.getElementsByTagName('li');
+ 
+ for(var i=0;i<allItem.length;i++){
+	 alert(allItem[i].firstChild.data);//노드내의 첫번째 요소.data
+ }
+</script>
+
+</body>
+</html>

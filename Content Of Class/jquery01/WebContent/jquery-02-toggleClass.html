@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$().ready(function(){
+	$("button").click(function(){
+		$("h1, h2, p").removeClass("blue");//removeClass("클래스명");
+	});
+});
+</script>
+<style>
+.blue{color: blue;}
+</style>
+</head>
+<body>
+
+<h1 class="blue">Heading 1</h1>
+<h2 class="blue">Heading 2</h2>
+
+<p class="blue">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Remove class from elements</button>
+
+</body>
+</html>

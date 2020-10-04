@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>onchange event</title>
+<script>
+function sub(){
+	var x=document.getElementById("name");
+	x.value=x.value.toLowerCase();
+}
+</script>
+</head>
+<body>
+<!-- onchange() input요소의 value가 변경시 실행
+    체크시점 input태그에서 focus가 벗날때  -->
+영어단어:<input id="name" onchange="sub()">
+<p>입력필드를 벗어나면 소문자로 변경됩니다.</p>
+</body>
+</html>

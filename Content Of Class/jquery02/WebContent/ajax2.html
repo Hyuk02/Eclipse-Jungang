@@ -1,0 +1,34 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function getFromServer(){
+	var req;
+	//XMLHttpRequest객체 얻기
+	if(window.XMLHttpRequest){//code for IE7+,FireFox,Chrome,Opera,Safari
+		req=new XMLHttpRequest();
+	}
+	/* onreadystatechange에 콜백함수 추가 */
+	req.onreadystatechange=function(){
+		if(req.readyState==4 & req.status==200){
+			document.getElementById("target").innerHTML
+			              =req.responseText;
+		} 
+	}
+	//준비 open(전송방식, 요청리소스,비동기여부(true비동,false동기));
+	//alert(req.readyState);
+	req.open("GET","testfile.jsp",true);//
+	//요청 객체 전송
+	//alert(req.readyState);
+	req.send();
+	//alert(req.readyState);
+}
+</script>
+</head>
+<body>
+<div id="target" 
+ style="width:300px; height:60px; border:1px solid black;"></div>
+
+<button type="button" onclick="getFromServer()">GET DATA</button>
+</body>
+</html>

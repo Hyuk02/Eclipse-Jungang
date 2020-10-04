@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var myCar = {
+		model:"520d",
+		speed:60,
+		color:"red",
+		brake:function(){this.speed-=10;},
+		accel:function(){this.speed+=10;}
+};
+
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+myCar.accel();
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+myCar.brake();
+document.write("모델:"+myCar.model+" 속도:"+myCar.speed+'<br>');
+</script>
+</body>
+</html>

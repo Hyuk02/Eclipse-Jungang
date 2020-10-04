@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title></head>
+<body>
+<div>
+<p>첫번째 숫자:<input type="text" id="x">
+<p>두번째 숫자:<input type="text" id="y">
+<p>결과:<input type="text" id="result">
+<br>
+<button onclick="getResult()">결과 </button>
+</div>
+</body>
+</html>
+<script>
+var x=prompt("첫번째 숫자","");
+var y=prompt("두번째 숫자","");
+document.getElementById("x").value=x;
+document.getElementById("y").value=y;
+</script>
+<script>
+function getResult(){
+	var x=document.getElementById("x").value;
+	var y=document.getElementById("y").value;
+ document.getElementById("result").value=parseInt(x)+parseInt(y);
+}
+</script>

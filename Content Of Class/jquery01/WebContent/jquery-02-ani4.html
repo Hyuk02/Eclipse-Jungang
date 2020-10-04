@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		var div=$("div");
+		div.animate({left:'100px'},"slow");
+		div.animate({fontSize:'3em'},"slow");
+	});
+});
+</script>
+</head>
+<body>
+<button>Start Animation</button>
+<p>요소 처리 animaition() 동시 실행</p>
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">Hello</div>
+</body>
+</html>

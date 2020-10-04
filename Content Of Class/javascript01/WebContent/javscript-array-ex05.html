@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="myForm">
+ <input type="text" name="a1"><br>
+ <input type="text" name="a2"><br>
+ <input name="a3">
+ <input type="button" onclick="init()" value="초기화">
+</form>
+<script>
+function init(){
+   for(var i=0;i<3;i++){
+	 document.myForm["a"+(i+1)].value=i;
+   }
+}
+</script>
+</body>
+</html>

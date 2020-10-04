@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>validation</title>
+<script>
+function check(){
+	// name속성으로 접근
+	//document.form이름.form내의요소명(.value)
+	var name=document.frm.name;//요소정보 접근
+	var nameValue=name.value;//접근한 요소의 값 속성에 접근
+	alert(nameValue);
+}
+</script>
+</head>
+<body>
+<form name="frm">
+ <p>이름: <input type="text" name="name">
+ <input type='submit' value="전송" onclick="check()">
+</form>
+
+</body>
+</html>

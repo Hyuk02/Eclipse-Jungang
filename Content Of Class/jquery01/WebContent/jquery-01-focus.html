@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+//문서가 로딩완료됬을 때 처리
+ $(document).ready(function(){
+	 /* 요소 처리 */
+	 $("input").focus(function(){
+		 $(this).css("background-color","yellow");//css(속성명,값);
+	 });
+	 $("input").blur(function(){
+		 $(this).css("background-color","white");//css(속성명,값);
+	 });
+ });
+</script>
+</head>
+<body>
+아이디:<input type="text" name="name"><br>
+</body>
+</html>

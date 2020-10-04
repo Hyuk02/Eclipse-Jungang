@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+</head><body>
+<script>
+//결과를 return하는 함수 function 함수명(){retrun 값;}
+function sub(){
+	var x=1;
+	//document.write(x);
+	return x;//결과를 리턴
+}
+function result(){
+ var x=sub();//위에서 선언한 함수
+     x=x+10;
+     document.write(x);
+}
+</script>
+<div>
+<button onclick="result()">클릭</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function isConfirm(){
+	var yesno=confirm("정말탈퇴하시겠습니까?");
+	alert(yesno);
+	if(yesno){//yesno==true
+		document.write("삭제처리");
+	}else{
+		document.write("삭제 미처리");
+	}
+}
+</script>
+<button onclick="isConfirm()">탈퇴</button>
+</body>
+</html>
